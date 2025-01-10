@@ -1,0 +1,231 @@
+* {
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 80%;
+    font-family: sans-serif;
+    margin: 30px auto;
+    border: 2px solid black;
+}
+header,main,footer {
+    border:2px solid black;
+    width:100%;
+}
+
+main > *{
+    border:2px solid black;
+}
+
+main a {
+    color :rgb(2, 2, 219);
+}
+
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #eee; */
+
+    text-align: center;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    gap:.5rem;
+}
+
+nav li::after {
+    content: "/";
+    margin-left: 5px;
+}
+nav li:last-child::after {
+    content: "";
+}
+
+nav ul a {
+    text-decoration: none;
+    color:black;
+}
+
+.nav-logo img {
+    height: 40px; /* 根据需要调整具体高度 */
+    width: auto;
+}
+
+.nav-logo .logo {
+    margin: 0;
+    font-size: 24px; /* 根据需要调整字体大小 */
+    line-height: 1;
+}
+.header-top{
+    padding:20px;
+}
+
+.header-bottom {
+    padding-bottom:30px;
+}
+
+.project-container {
+    
+    padding:auto 20px
+}
+
+.project-container h3{
+    border: 2px solid black;
+    padding:auto 20px
+}
+
+.experience {
+    text-align: left;
+    padding:20px;
+    border: 2px solid black;
+}
+
+.Education-container {
+    padding:20px;
+    border: 2px solid black;
+}
+
+.Education-container>*{
+    text-align: left;
+    list-style-type:"- ";
+    list-style-position:inside;
+}
+
+.review-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.review{
+    border:2px solid black;
+    border-radius: 30px;
+    margin:10px;
+    padding:20px;
+    text-align: left;
+    max-width: 300px;
+}
+
+.review-author{
+    color: rgb(186, 186, 186);
+    font-weight: bold;
+}
+
+h1, h2{
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    padding:5px;
+}
+
+.header-bottom p {
+    color:grey;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+/* 添加媒体查询，针对宽屏设备 */
+@media screen and (min-width: 768px) {
+    body {
+        display:flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        display:flex;
+    }
+    main section {
+        flex:1;
+        text-align: left;
+    }
+    section h2{
+        padding:10px;
+    }
+
+    .project-container > *:first-child{
+        border-top:0;
+    }
+
+    .project-container > *:last-child{
+        border-bottom:0;
+    }
+
+    .project-container h3{
+        flex:1;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .header-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-bottom{
+        margin:30px auto;
+    }
+
+    .nav-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        margin-left:50px
+    }
+
+    .experience{
+        outline:none;
+        border:2px solid black;
+    }
+
+    .work-experience-container > *:first-child{
+        border-top:0;
+    }
+
+    .work-experience-container > *:last-child{
+        border-bottom:0;
+    }
+
+    .Education-container {
+        padding:20px;
+        border: none;
+    }
+
+    h1, h2{
+        font-family: 'Indie Flower', cursive;
+        text-align: left;
+        padding:15px;
+    }
+
+    .header-bottom h1 {
+        font-size:xx-large;
+    }
+
+    .footer-bottom h2 {
+        text-align: center;
+        margin:100px;
+    }
+}
